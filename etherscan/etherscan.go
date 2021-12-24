@@ -16,7 +16,6 @@ var (
 )
 
 func GetGasTrackerEstimate(token string) (*GasTrackerEstimate, error) {
-	fmt.Println(fmt.Sprintf("%s/api?module=gastracker&action=gasestimate&apikey=%s", EndpointMainnet, token))
 	resp, err := http.Get(fmt.Sprintf("%s/api?module=gastracker&action=gasestimate&apikey=%s", EndpointMainnet, token))
 	if err != nil {
 		return nil, err
